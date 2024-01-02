@@ -1,137 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <title>Александр Пронин - Портфолио</title>
+    <link rel="stylesheet" href="styles/style.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f5f5f5;
-            color: #333;
+        @media screen and (max-width: 768px) {
+            .header-content {
+                padding: 10px;
+            }
+            .section-content {
+                padding: 20px;
+            }
+            .project img {
+                border-radius: 0;
+            }
         }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-        header {
-            text-align: center;
-            background-color: #7134db;
-            color: #fff;
-            padding: 20px;
-        }
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
 
-        section {
-            margin: 20px;
-        }
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+.header-title {
+    margin: 0;
+}
 
-        li {
-            margin-bottom: 5px;
-        }
+.header-subtitle {
+    margin: 0;
+}
 
-        .project {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            /* увеличил расстояние между проектами */
-        }
+.section {
+    padding: 40px 0;
+}
 
-        .project img {
-            max-width: 100%;
-            /* сделал изображения адаптивными */
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* добавил тень для эффекта высоты */
-        }
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .project-info {
-            flex-grow: 1;
-            padding: 20px;
-            /* добавил отступ для улучшенного чтения текста */
-        }
+.section-title {
+    color: #007bff;
+}
 
-        .project-info h3 {
-            margin-bottom: 10px;
-        }
+.section-text {
+    line-height: 1.6;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+.app-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.app-link:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Александр Пронин</h1>
-        <p>Mobile Developer</p>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Александр Пронин</h1>
+            <p class="header-subtitle">Mobile Developer</p>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Привет! Меня зовут Александр, и я разработчик, экспериментирующий с мобильной разработкой при помощи Flutter
-            и Dart. Мой опыт включает несколько проектов с Firebase и Supabase. Я активно расширяю свои навыки,
-            постоянно обучаюсь и готов к новым профессиональным вызовам. Добро пожаловать на моё портфолио, где вы
-            найдете обзор моих проектов!</p>
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">Привет! Меня зовут Александр, и я разработчик, экспериментирующий с мобильной разработкой при помощи Flutter и Dart. Мой опыт включает несколько проектов с Firebase и Supabase. Я активно расширяю свои навыки, постоянно обучаюсь и готов к новым профессиональным вызовам. Добро пожаловать на моё портфолио, где вы найдете обзор моих проектов!</p>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Flutter</li>
-            <li>Dart</li>
-            <li>Firebase</li>
-            <li>Supabase</li>
-        </ul>
+    <section id="skills" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills-list">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Firebase</li>
+                <li>Supabase</li>
+            </ul>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>GutHub</h2>
-        <a href="https://github.com/Developer1414">https://github.com/Developer1414</a>
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/68a63c09db72aaa1f45450079a85840856cdaf7d-1680531453.png" alt="Project 1">
+                </div>
+                <div class="project">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/aa7fcfd11c2ba0e970d4ebfac3c97dd52d147b7b-1680531273.png" alt="Project 2">
+                </div>
+                <div class="project">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/b85e192d007c0e5c3ef605b6be2fc55e928c6786-1680531449.png" alt="Project 3">
+                </div>
+                <div class="project">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f9403064eeac7f55d93e45cc52693a86db10e657-1680531273.png" alt="Project 4">
+                </div>
+                <div class="project">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f0d55a6a40a4f6e4fcc6f63d380ac01bd7bbbc29-1680531280.png" alt="Project 5">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/68a63c09db72aaa1f45450079a85840856cdaf7d-1680531453.png" alt="Project 1">
+    <section id="contact" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-text">Let's connect! Find me on <a href="https://github.com/Developer1414" target="_blank">GitHub</a>.</p>
         </div>
-
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/aa7fcfd11c2ba0e970d4ebfac3c97dd52d147b7b-1680531273.png" alt="Project 2">
-        </div>
-
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/b85e192d007c0e5c3ef605b6be2fc55e928c6786-1680531449.png" alt="Project 2">
-        </div>
-
-        </div>
-
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f9403064eeac7f55d93e45cc52693a86db10e657-1680531273.png" alt="Project 2">
-        </div>
-
-        </div>
-
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f0d55a6a40a4f6e4fcc6f63d380ac01bd7bbbc29-1680531280.png" alt="Project 2">
-        </div>
-
-        <!-- Add more projects as needed -->
-
     </section>
 
-    <section id="skills">
-        <h2>Моё главное приложение:</h2>
-        <a
-            href="https://play.google.com/store/apps/details?id=com.revens.mini.casino">https://play.google.com/store/apps/details?id=com.revens.mini.casino</a>
+    <section id="app-link" class="section">
+        <div class="section-content">
+            <h2 class="section-title">My Main App</h2>
+            <a href="https://play.google.com/store/apps/details?id=com.revens.mini.casino" class="app-link" target="_blank">Check it out on Google Play</a>
+        </div>
     </section>
 
     <script src="script.js"></script>
 </body>
-
 </html>
