@@ -17,25 +17,68 @@
                 border-radius: 0;
             }
         }
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-.header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            border-top: 8px solid #007bff; /* Add a top border */
+        }
 
-.header-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 25px 0;
+            text-align: center;
+            border-bottom-left-radius: 20px; /* Rounded corners for the bottom-left */
+            border-bottom-right-radius: 20px; /* Rounded corners for the bottom-right */
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ... Other existing styles ... */
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd; /* Add a border around the content */
+            border-radius: 10px; /* Rounded corners for the content */
+            padding: 20px;
+            background-color: #fff; /* White background for the content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+
+        /* ... Other existing styles ... */
+
+        .app-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 20px; /* Add some top margin for separation */
+        }
+
+        .app-link:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            border-top-left-radius: 20px; /* Rounded corners for the top-left */
+            border-top-right-radius: 20px; /* Rounded corners for the top-right */
+            margin-top: 20px; /* Add top margin for separation */
+        }
 
 .header-title {
     margin: 0;
@@ -46,13 +89,9 @@ body {
 }
 
 .section {
-    padding: 40px 0;
+    padding: 10px 0;
 }
 
-.section-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 .section-title {
     color: #007bff;
@@ -89,27 +128,6 @@ body {
     transform: scale(1.05);
 }
 
-.app-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.app-link:hover {
-    background-color: #0056b3;
-}
-
-.footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-}
-
     </style>
 </head>
 <body>
@@ -136,6 +154,7 @@ body {
                 <li>Dart</li>
                 <li>Firebase</li>
                 <li>Supabase</li>
+                <li>REST API</li>
             </ul>
         </div>
     </section>
