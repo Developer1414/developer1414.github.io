@@ -78,6 +78,19 @@
                     alert('Please enter a code to verify.');
                 }
             }
+
+            // Добавим код для обработки GET-запроса
+            async function getCode() {
+                try {
+                    const response = await fetch('https://developer1414.github.io/test-request.html/generate_code');
+                    const data = await response.json();
+                    console.log('Received code:', data.code);
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+
+            getCode();  // Вызываем функцию при загрузке страницы
         });
     </script>
 </div>
