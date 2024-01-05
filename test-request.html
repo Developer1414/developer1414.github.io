@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #codeInput {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Code Generator</h1>
+    <button id="generateBtn">Generate Code</button>
+    <input type="text" id="codeInput" placeholder="Enter Code">
+    <button id="verifyBtn">Verify Code</button>
+    <div id="result"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const generateBtn = document.getElementById('generateBtn');
+            const verifyBtn = document.getElementById('verifyBtn');
+            const codeInput = document.getElementById('codeInput');
+            const resultDiv = document.getElementById('result');
+
+            generateBtn.addEventListener('click', function () {
+                generateCode();
+            });
+
+            verifyBtn.addEventListener('click', function () {
+                verifyCode();
+            });
+
+            function generateCode() {
+                const generatedCode = Math.floor(10000 + Math.random() * 90000);
+                resultDiv.innerHTML = `Generated Code: ${generatedCode}`;
+                codeInput.value = generatedCode;
+            }
+
+            function verifyCode() {
+                const userCode = codeInput.value;
+                if (userCode) {
+                    // Отправить POST-запрос на сервер для проверки кода
+                    // В данном примере, просто выводим сообщение в консоль
+                    console.log(`Verifying Code: ${userCode}`);
+
+                    // Очистить поле ввода и результат
+                    codeInput.value = '';
+                    resultDiv.innerHTML = '';
+                } else {
+                    alert('Please enter a code to verify.');
+                }
+            }
+        });
+    </script>
+</div>
+
+</body>
+</html>
