@@ -24,7 +24,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            border-top: 8px solid #007bff; /* Add a top border */
+            border-top: 8px solid #007bff;
         }
 
         .header {
@@ -32,8 +32,8 @@
             color: #fff;
             padding: 25px 0;
             text-align: center;
-            border-bottom-left-radius: 20px; /* Rounded corners for the bottom-left */
-            border-bottom-right-radius: 20px; /* Rounded corners for the bottom-right */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
         .header-content {
@@ -41,19 +41,15 @@
             margin: 0 auto;
         }
 
-        /* ... Other existing styles ... */
-
         .section-content {
             max-width: 800px;
             margin: 0 auto;
-            border: 1px solid #ddd; /* Add a border around the content */
-            border-radius: 10px; /* Rounded corners for the content */
+            border: 1px solid #ddd;
+            border-radius: 10px;
             padding: 20px;
-            background-color: #fff; /* White background for the content */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* ... Other existing styles ... */
 
         .app-link {
             display: inline-block;
@@ -63,7 +59,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease-in-out;
-            margin-top: 20px; /* Add some top margin for separation */
+            margin-top: 20px;
         }
 
         .app-link:hover {
@@ -75,58 +71,98 @@
             padding: 20px 0;
             background-color: #333;
             color: #fff;
-            border-top-left-radius: 20px; /* Rounded corners for the top-left */
-            border-top-right-radius: 20px; /* Rounded corners for the top-right */
-            margin-top: 20px; /* Add top margin for separation */
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: 20px;
         }
 
-.header-title {
-    margin: 0;
-}
+        .header-title {
+            margin: 0;
+        }
 
-.header-subtitle {
-    margin: 0;
-}
+        .header-subtitle {
+            margin: 0;
+        }
 
-.section {
-    padding: 10px 0;
-}
+        .section {
+            padding: 10px 0;
+        }
 
+        .section-title {
+            color: #007bff;
+        }
 
-.section-title {
-    color: #007bff;
-}
+        .section-text {
+            line-height: 1.6;
+        }
 
-.section-text {
-    line-height: 1.6;
-}
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
 
-.skills-list {
-    list-style: none;
-    padding: 0;
-}
+        .skills-list li {
+            margin-bottom: 8px;
+        }
 
-.skills-list li {
-    margin-bottom: 8px;
-}
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
+        .project img:hover {
+            transform: scale(1.05);
+        }
 
-.project img:hover {
-    transform: scale(1.05);
-}
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: red;
+        }
 
     </style>
 </head>
@@ -167,19 +203,19 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
                 <div class="project">
-                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/68a63c09db72aaa1f45450079a85840856cdaf7d-1680531453.png" alt="Project 1">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/68a63c09db72aaa1f45450079a85840856cdaf7d-1680531453.png" alt="Project 1" onclick="openModal(this.src)">
                 </div>
                 <div class="project">
-                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/aa7fcfd11c2ba0e970d4ebfac3c97dd52d147b7b-1680531273.png" alt="Project 2">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/aa7fcfd11c2ba0e970d4ebfac3c97dd52d147b7b-1680531273.png" alt="Project 2" onclick="openModal(this.src)">
                 </div>
                 <div class="project">
-                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/b85e192d007c0e5c3ef605b6be2fc55e928c6786-1680531449.png" alt="Project 3">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/b85e192d007c0e5c3ef605b6be2fc55e928c6786-1680531449.png" alt="Project 3" onclick="openModal(this.src)">
                 </div>
                 <div class="project">
-                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f9403064eeac7f55d93e45cc52693a86db10e657-1680531273.png" alt="Project 4">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f9403064eeac7f55d93e45cc52693a86db10e657-1680531273.png" alt="Project 4" onclick="openModal(this.src)">
                 </div>
                 <div class="project">
-                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f0d55a6a40a4f6e4fcc6f63d380ac01bd7bbbc29-1680531280.png" alt="Project 5">
+                    <img src="https://raw.githubusercontent.com/Developer1414/developer1414.github.io/main/Images/f0d55a6a40a4f6e4fcc6f63d380ac01bd7bbbc29-1680531280.png" alt="Project 5" onclick="openModal(this.src)">
                 </div>
             </div>
         </div>
@@ -199,6 +235,27 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="">
+        </div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
